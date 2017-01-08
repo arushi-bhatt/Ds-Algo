@@ -71,8 +71,8 @@ void pairSum(int arr[], int n, int sum)
 
 }
  int main(){
-     int n,sum;
-     cout<<"no. of elements in array and value of sum :: ";
+    int n,sum;
+    cout<<"no. of elements in array and value of sum :: ";
     cin>>n>>sum;
     cout<<endl;
 
@@ -84,6 +84,7 @@ void pairSum(int arr[], int n, int sum)
         cin>>a[i];
     cout<<endl<<"pairs: "<<endl;
     pairSum(a,n,sum);
+    delete [] a;
     return 0;
  }
 
