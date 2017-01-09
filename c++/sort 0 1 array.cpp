@@ -1,6 +1,6 @@
-
-// assignment 4 ques 2
-//find pair which make sum of x
+/*Question : You are given with an array containing only 0’s and 1’s. Write a function to
+sort this array. Do it in one pass, this means you can’t first find the count of
+0’s and 1’s in one pass and update the array in second pass */
 #include<iostream>
 #include<cmath>
 using namespace std;

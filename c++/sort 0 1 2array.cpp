@@ -1,6 +1,5 @@
+//sort array of elements having '0 and 1 ' only
 
-// assignment 4 ques 2
-//find pair which make sum of x
 #include<iostream>
 #include<cmath>
 using namespace std;
