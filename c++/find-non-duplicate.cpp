@@ -1,9 +1,16 @@
 
 // Given 2N+1 numbers out of which N are duplicate find the non-duplicate number.
-
+//complexity O(n)
 #include<iostream>
 #include<cmath>
 using namespace std;
+int FindDuplicate(int arr[], int n){
+	// Write your code here
+	int i,x=0;
+    for(i=0;i<n;i++)
+           x=x^arr[i];
+    return x;
+}
 
 int main()
 {
@@ -16,13 +23,9 @@ int main()
     for(i=0;i<n;i++)
     cin>>arr[i];
 
-    long int x=0;
-    for(i=0;i<n;i++)
-           x=x^arr[i];
-
-    cout<<x;
-        cout<<endl;
-        return 0;
+    cout<<endl<<"non-duplicate element is :"<<FindDuplicate(arr,n);
+    cout<<endl;
+    return 0;
 }
 
 /*

@@ -34,6 +34,7 @@ void sort012(int arr[], int n)  {
 
         else  k++;
     }
+    cout<<i<<j<<k;
 }
 int main()
 {
