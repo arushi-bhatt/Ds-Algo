@@ -60,6 +60,7 @@
     <Compile Include="AssemblyInfo.fs" />
     <Compile Include="MainWindow.fs" />
     <Compile Include="Main.fs" />
+    <Compile Include="..\binarySearch.fs" />
   </ItemGroup>
   <Import Project="$(FSharpTargetsPath)" />
 </Project>
