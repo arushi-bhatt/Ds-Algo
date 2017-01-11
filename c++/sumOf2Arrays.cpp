@@ -105,5 +105,8 @@ int main(){
     cout<<"output array : "<<endl;
     for(i=0;i<=maximum;i++)
         cout<<output[i]<<" ";
+    delete [] a;
+    delete [] b;
+    delete [] output;
 
 return 0;}
