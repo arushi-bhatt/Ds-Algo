@@ -1,16 +1,21 @@
 // Find second largest element in an array.
 
 #include<iostream>
+#include<cmath>
 using namespace std;
 
 int FindSecondLargest(int arr[], int n){
+    if(n<=1)
+        return -INFINITY;
 	int max1,max2;
 	int i;
 	max1=max2=arr[0];
 	for(i=1;i<n;i++){
-	    if(arr[i]>max2){
-	        if(arr[i]>max1){
-                max2=max1;
+        //if current element is >max2 , but should not be equal to max1 again
+	    if(arr[i]>max2 && arr[i]!=max1){
+        //if current element is also > max1
+	        if(arr[i]>=max1){
+	            max2=max1;
                 max1=arr[i];
 	        }
 	        else max2=arr[i];
@@ -35,5 +40,5 @@ int main(){
         cin>>arr[i];
 
     cout<<endl<<"second largest no. : "<<FindSecondLargest(arr,n);
-
+    return 0;
 }
