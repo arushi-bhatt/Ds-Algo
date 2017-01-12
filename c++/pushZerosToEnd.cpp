@@ -1,5 +1,3 @@
-
-
 /* Given an array of random numbers, push all the zeros of a given array to the
 end of the array. For example,
 Input : {1, 9, 8, 4, 0, 0, 2, 7, 0, 6, 0}
