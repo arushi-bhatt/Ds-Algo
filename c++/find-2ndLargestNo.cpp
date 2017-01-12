@@ -40,5 +40,6 @@ int main(){
         cin>>arr[i];
 
     cout<<endl<<"second largest no. : "<<FindSecondLargest(arr,n);
+    delete [] arr;
     return 0;
 }

@@ -56,5 +56,7 @@ int main(){
         cin>>arr[i];
 
     cout<<endl<<"duplicate no : "<<Find_duplicate(arr,n);
+    delete [] arr;
+    return 0;
 
 }
