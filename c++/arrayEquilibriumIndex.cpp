@@ -41,6 +41,7 @@ int equilibrium(int arr[], int n) {
         if(s1[i-1]==s2[i+1])
             return i;
     }
+    return -1;
 }
 int main(){
 //n=no.of elements
