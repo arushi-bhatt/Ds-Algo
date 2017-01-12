@@ -9,6 +9,46 @@ The order of all other elements should be same. */
 #include<iostream>
 #include<cmath>
 using namespace std;
+//version 2
+
+void PushZeroesEnd(int arr[], int n){
+    int i,j,back;
+    //j is point to last zero from the end
+	for(i=n-1,j=n;i>=0;i--){
+
+        if(arr[i]==0){
+
+            for(back=i;back<j-1;back++){
+                arr[back]=arr[back+1];
+            }
+            arr[j-1]=0;
+            j--;
+        }
+
+    }
+
+}
+
+int main(){
+//n=no.of elements
+
+    int n;
+    cout<<"no. of elements: ";
+    cin>>n;
+
+    cout<<endl;
+    cout<<"Enter elements : ";
+    int i;
+    int *arr = new int[n];
+    for(i=0;i<n;i++)
+        cin>>arr[i];
+
+    PushZeroesEnd(arr,n);
+    cout<<endl;
+    for(i=0;i<n;i++)
+    cout<<arr[i]<<" ";
+
+}
 
 
 
