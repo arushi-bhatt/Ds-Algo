@@ -1,5 +1,5 @@
 /*
-Write a function Rotate(ar[], nr, n) that rotates arr[] of size n by nr elements
+Write a function Rotate(arr[], nr, n) that rotates arr[] of size n by nr elements
 (towards right).
 Eg. Input : {1, 2, 3, 4, 5, 6, 7} n = 7 and d = 2
 Output : {3, 4, 5, 6, 7, 1, 2}
