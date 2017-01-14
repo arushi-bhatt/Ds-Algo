@@ -1,7 +1,7 @@
 /*
-
 Pair star
-Given a string, compute recursively a new string where identical chars that are adjacent in the original string are separated from each other by a "*".
+Given a string, compute recursively a new string where identical chars that are adjacent
+ in the original string are separated from each other by a "*".
 Sample Input 1 :
 
 hello
@@ -33,34 +33,25 @@ using namespace std;
 // Change in the given string itself. So no need to return or print the changed string.
 
 void helper(char str[],int si,int count){
-    if(str[si]=='\0')
-    {
-
+    if(str[si]=='\0'){
         str[si+count]='\0';
-
-    return;
+        return;
     }
 
-    if(str[si]== str[si+1])
-    {
+    if(str[si]== str[si+1]){
         count++;
         helper(str,si+1,count);
         int c =--count;
         str[si+c]=str[si];
         str[si+c+1]='*';
         str[si+c+2]=str[si];
-
-
     }
-
     else {helper(str,si+1,count);
         str[si+count]=str[si];
     }
 }
 void pairStar(char input[]) {
-
     helper(input,0,0);
-
 }
 
 int main(){
