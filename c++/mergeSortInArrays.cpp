@@ -1,5 +1,4 @@
 /*
-
 Merge Sort
 Sort an array using Merge Sort.
 Change in the input array itself. So no need to return pr print anything.
@@ -23,7 +22,7 @@ Sample Output:
 #include<math.h>
 #include<iostream>
 using namespace std;
-
+//this function merge two sorted subarrays into one big array
 void merge2arrays(int a[],int p,int q,int r)
 {
     int n1=q-p+1;
@@ -37,20 +36,21 @@ void merge2arrays(int a[],int p,int q,int r)
         }
         else {c[k]=a[j];j++;}
     }
-
+//if in case still elements are left in any of the subarray
     for(;j<=r;j++,k++){
         c[k]=a[j];
     }
     for(;i<=q;i++,k++){
         c[k]=a[i];
     }
+//assign the original array with the new array
     for(i=p,k=0;i<=r;i++,k++){
         a[i]=c[k];
     }
     delete [] c;
 }
 
-
+//recursive function of merge Sort
 void mergeSort(int a[], int si,int ei){
     if(si<ei){
         mergeSort(a,si,(si+ei)/2);
@@ -83,3 +83,4 @@ int main(){
     cout<<endl;
 return 0;
 }
+
