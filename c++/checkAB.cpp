@@ -1,6 +1,6 @@
 /*
-
 Check AB
+
 Suppose you have a string made up of only 'a' and 'b'. Write a recursive function that checks if the string was generated using the following rules:
 
 a. The string begins with an 'a'
@@ -23,15 +23,17 @@ true
 using namespace std;
 
 bool helper(char str[],int si){
-
+    //base condition
     if(str[si]=='\0'){
         return true;
     }
+    //this checks for the condition : Each 'a' is followed by nothing or an 'a' or "bb"
     if(str[si]=='a'){
         if(str[si+1]=='a'||str[si+1]=='\0'||((str[si+1]=='b')&&(str[si+2]=='b')))
             return helper(str,si+1);
         else return false;
     }
+    //this checks for the condition : Each "bb" is followed by nothing or an 'a'
     if(str[si]=='b'&&str[si+1]=='b'){
         if(str[si+2]=='a'||str[si+2]=='\0')
             return helper(str,si+2);
@@ -41,6 +43,7 @@ bool helper(char str[],int si){
 
 
 bool checkAB(char str[]){
+//this checks for condition : The string begins with an 'a'
  if(str[0]=='a')
     return helper(str,0);
  else return false;
