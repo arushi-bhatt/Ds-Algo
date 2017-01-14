@@ -17,7 +17,7 @@ Sample Output 1:
 using namespace std;
 
 int waysUpStair(int n){
-
+//we hav e 3 base conditions
     if(n==1)
         return 1;
 
@@ -27,6 +27,7 @@ int waysUpStair(int n){
     if(n==3)
         return 4;
 
+//in other cases
     return waysUpStair(n-1)+waysUpStair(n-2)+waysUpStair(n-3);
 }
 
