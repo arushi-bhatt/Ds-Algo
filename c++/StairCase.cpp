@@ -1,6 +1,8 @@
 /*
 Staircase
-A child is running up a staircase with n steps, and can hop either 1 step, 2 steps or 3 steps at a time. Implement a method to count how many possible ways the child can run up to the stairs. You need to return all possible number of ways.
+A child is running up a staircase with n steps, and can hop either 1 step, 2 steps or 3 steps at a time.
+Implement a method to count how many possible ways the child can run up to the stairs.
+ You need to return all possible number of ways.
 
 Input format : n (No. of steps) (n <= 30)
 Sample Input 1:
@@ -10,14 +12,13 @@ Sample Input 1:
 Sample Output 1:
 
 7
-
 */
 
 #include<iostream>
 using namespace std;
 
 int waysUpStair(int n){
-//we hav e 3 base conditions
+//we have 3 base conditions
     if(n==1)
         return 1;
 

@@ -53,9 +53,11 @@ int main(){
     char str[40];
     cout<<"enter string : ";
     gets(str);
+
     if(checkAB(str))
         cout<<endl<<"true";
     else cout<<endl<<"false";
+
     cout<<endl;
     return 0;
 }
