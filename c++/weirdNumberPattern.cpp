@@ -44,48 +44,65 @@ Sample Output 2 :
 111221
 
 */
-int* helper(int n){
+#include<iostream>
+using namespace std;
+
+void helper(int n,int arr[]){
     //base condition
-    int arr[20];//temporary array for current row no.
     if(n==1){
         arr[0]=1;
         arr[1]=0;//0 at the end is used as a terminator of every row
-        cout<<"1"<<endl;
-        return arr;
+        cout<<arr[0]<<endl;
+
     }
     //if n>1
-    else {
-        int *a;
-        a=helper(n-1);//a points to the array returned by the function helper
+    else {helper(n-1,arr);
 
-        int k=0;//k is counter for the current row no. array
-
-        int arr[20];//temporary array for current row
+        int k=-1;//k is counter for the current row no. array
+        int *a=new int [10];
+        //temporary array for current row
 
         //traverse through previous array and form current row array on the basis of it
-        for(int i=0;a[i]!=0;i++){
+        for(int i=0;arr[i]!=0;i++){
             //count keeps track of the no. consecutive same elements
             int count=1;
-            while(a[i+1]==a[i]){
+            while(arr[i+1]==arr[i]){
                 i++;
                 count++;
             }
         //assign the record for one distinct element
-            arr[k++]=count;
-            arr[k++]=a[i];
+            a[++k]=count;
+            a[++k]=arr[i];
         }
-        arr[k++]=0;//0 at the end is used as a terminator of every row
-        //print current row
-        for(k=0;arr[k]!=0;k++)
-            cout<<arr[k];
+        a[++k]=0;//0 at the end is used as a terminator of every row
+        //print current row and assign it to array parameter
+        for(k=0;a[k]!=0;k++){
+                cout<<a[k];
+                arr[k]=a[k];
+        }
+        arr[k]=0;//add the terminator symbol '0'
         cout<<endl;
-        //return current row
-        return arr;
+        delete a;
+
     }
 }
 
 
 void printPattern(int n) {
-    helper(n);
+   int arr[10];
+   helper(n,arr);
+
 
 }
+int main (){
+    cout<<"enter no. of rows :";
+    int n; cin>>n;
+    printPattern(n);
+    return 0;
+}
+
+/*Things, I have learnt with this program :
+1. frame and decide the flow of every problem at the beginning, before coding
+2. local variables address must not be returned, this can produce segmentation fault.
+3. Avoid silly errors.
+4. Decide 2-3 solutions at the beginnings, then go ahead with the best one.*/
