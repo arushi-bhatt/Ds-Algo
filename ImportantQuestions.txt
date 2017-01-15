@@ -23,4 +23,20 @@ Q1 = What is Segmentation Fault ?
 		}
 		// Now p is dangling
 
-		The pointer p dangles because it points to character variable c that ceased to exist after the block ended. And when you try to dereference dangling pointer (like *p='A'), you would probably get a segfault.
+		The pointer p dangles because it points to character variable c that ceased to exist after the block ended. And when you try to dereference dangling pointer (like *p='A'), you would probably get a segfault
+
+
+***********************************************************************
+2). Return array from function in C
+_______________________________________
+C programming does not allow to return an entire array as an argument to a function. However, you can return a pointer to an array by specifying the array's name without an index.
+
+If you want to return a single-dimension array from a function, you would have to declare a function returning a pointer as in the following example 
+
+int * myFunction() {
+   .
+   .
+   .
+}
+
+Second point to remember is that C does not advocate to return the address of a local variable to outside of the function, so you would have to define the local variable as static variable.
