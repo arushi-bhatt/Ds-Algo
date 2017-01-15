@@ -1,0 +1,26 @@
+Important Questions
+_____________________________________________________________________
+Q1 = What is Segmentation Fault ?
+
+		Segmentation fault is a specific kind of error caused by accessing memory that “does not belong to you.” It’s a helper mechanism that keeps you from corrupting the memory and introducing hard-to-debug memory bugs. Whenever you get a segfault you know you are doing something wrong with memory – accessing variable that has already been freed, writing to a read-only portion of the memory, etc. Segmentation fault is essentially the same in most languages that let you mess with the memory management, there is no principial difference between segfaults in C and C++.
+
+		There are many ways to get a segfault, at least in the lower-level languages such as C(++). A common way to get a segfault is to dereference a null pointer:
+
+		int *p = NULL;
+		*p = 1;
+
+		Another segfault happens when you try to write to a portion of memory that was marked as read-only:
+
+		char *str = "Foo"; // Compiler marks the constant string as read-only
+		*str = 'b'; // Which means this is illegal and results in a segfault
+
+		Dangling pointer points to a thing that does not exist any more, like here:
+
+		char *p = NULL;
+		{
+		    char c;
+		    p = &c;
+		}
+		// Now p is dangling
+
+		The pointer p dangles because it points to character variable c that ceased to exist after the block ended. And when you try to dereference dangling pointer (like *p='A'), you would probably get a segfault.
