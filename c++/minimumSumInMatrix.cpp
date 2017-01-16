@@ -61,8 +61,10 @@ int main(){
     cin>>row;
     cout<<endl<<"enter elements:";
     int i,j;
-    int *arr=new int*[row];
+    int **arr=new int*[row];
     for(i=0;i<row;i++){
+        //dynamically allocate each row of array
+        arr[i] = new int [3];
         for(j=0;j<3;j++){
             cin>>arr[i][j];
         }
