@@ -1,18 +1,46 @@
-void helper(char arr[], int si){
-    if(arr[si]='\0'){
-        cout<<" "<<endl;
+#include<iostream>
+#include<cstdio>
+using namespace std;
+
+
+void helper(char arr[],char op[]){
+    if(arr[0]=='\0'){
+            op[0]='\0';
+
+
+        puts(op);
         return;
     }
-     helper(arr,si+1);
     int i;
-   for(i=si;arr[i]!='\0';i++){
-        cout<<arr[i];
+
+    char b[10];
+    for(i=0;arr[i]!='\0';i++){
+        b[i]=arr[i+1];
     }
-    cout<<endl;
+    helper(b,op);
+    b[0]=arr[0];
+
+    for(i=0;op[i]!='\0';i++){
+        b[i+1]=op[i];
+    }
+    b[i+1]='\0';
+    puts(b);
+    for(i=0;b[i]!='\0';i++){
+        op[i]=b[i];
+    }
+    op[i]='\0';
 
 
 }
 void printSubsequences(char input[]) {
-    helper(input,0);
 
+   char op[10];
+    helper(input,op);
+
+}
+
+int main(){
+    char str[10]="abc";
+
+printSubsequences(str);
 }
