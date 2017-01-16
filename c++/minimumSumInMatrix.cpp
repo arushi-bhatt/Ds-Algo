@@ -61,6 +61,7 @@ int main(){
     cin>>row;
     cout<<endl<<"enter elements:";
     int i,j;
+    //dynamic allocation of a 2d array
     int **arr=new int*[row];
     for(i=0;i<row;i++){
         //dynamically allocate each row of array
