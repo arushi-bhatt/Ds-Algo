@@ -73,3 +73,13 @@ int main(){
     cout<<minSum(arr,row);
     return 0;
 }
+
+/*Things I learnt form this program :
+1. carefully analyze the problem, don't create hustle.
+2. before actually compiling using compiler, compile it in it your mind.
+3. Dynamic allocation of 2D array :)
+4. awesome solution trick, for getting optimized solutions out of the feasible one,
+    I guess this comes under Dynamic Programming, though earlier I was trying a greedy approach, which were not able to pass
+    the test cases.
+    So, The conclusion is, Greedy approach doesn't always give the required optimized solution.
+*/
