@@ -11,7 +11,7 @@ Some important features :
 
 4. For some good and tricky questions, I have added the list of things, that I learnt after programming of that particular question.  
 
-5. Some worth noting points are mentioned in the 'Important Tips' and 'Important Questions' text files too.
+5. Some note-worthy points are mentioned in the 'Important Tips' and 'Important Questions' text files too.
 
 
 Enjoy Learning :)
