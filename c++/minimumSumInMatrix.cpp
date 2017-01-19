@@ -71,6 +71,12 @@ int main(){
         }
     }
     cout<<minSum(arr,row);
+
+    // release dynamically allocated memory
+	for (i=0; i < row; i++)
+		delete [] arr[i];// each array of characters
+
+	delete [] arr;// the array of pointers
     return 0;
 }
 
