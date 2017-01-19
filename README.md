@@ -1,8 +1,9 @@
 # Ds-Algo
 
-This Repository includes some important practice questions in various languages like : c++, f#, c#
+This Repository includes some important practice questions in various languages like : C++, F#, C#.
 
 Some important features :
+
 1. Questions are mainly based on usage of important Data Structures and Algorithms.
 
 2. Each Program is well documented.
