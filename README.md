@@ -1,6 +1,6 @@
 # Ds-Algo
 
-This Repository includes some important practice questions in various languages like : C++, F#, C#.
+This Repository includes some important practice questions in various languages like : C++, F# and C#.
 
 Some important features :
 
@@ -16,3 +16,6 @@ Some important features :
 
 
 Enjoy Learning :)
+
+
+MIT License @arushi-bhatt
