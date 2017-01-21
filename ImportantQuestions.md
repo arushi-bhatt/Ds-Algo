@@ -1,28 +1,28 @@
-Important Questions
+##Important Questions
 _____________________________________________________________________
-Q1 = What is Segmentation Fault ?
+###Q1 = What is Segmentation Fault ?
 
 		Segmentation fault is a specific kind of error caused by accessing memory that “does not belong to you.” It’s a helper mechanism that keeps you from corrupting the memory and introducing hard-to-debug memory bugs. Whenever you get a segfault you know you are doing something wrong with memory – accessing variable that has already been freed, writing to a read-only portion of the memory, etc. Segmentation fault is essentially the same in most languages that let you mess with the memory management, there is no principial difference between segfaults in C and C++.
 
 		There are many ways to get a segfault, at least in the lower-level languages such as C(++). A common way to get a segfault is to dereference a null pointer:
-
+```c++
 		int *p = NULL;
 		*p = 1;
-
+```
 		Another segfault happens when you try to write to a portion of memory that was marked as read-only:
-
+```c++
 		char *str = "Foo"; // Compiler marks the constant string as read-only
 		*str = 'b'; // Which means this is illegal and results in a segfault
-
+```
 		Dangling pointer points to a thing that does not exist any more, like here:
-
+```c++
 		char *p = NULL;
 		{
 		    char c;
 		    p = &c;
 		}
 		// Now p is dangling
-
+```
 		The pointer p dangles because it points to character variable c that ceased to exist after the block ended. And when you try to dereference dangling pointer (like *p='A'), you would probably get a segfault
 
 
@@ -33,11 +33,13 @@ C programming does not allow to return an entire array as an argument to a funct
 
 If you want to return a single-dimension array from a function, you would have to declare a function returning a pointer as in the following example 
 
+```c++
 int * myFunction() {
    .
    .
    .
 }
+```
 
 Second point to remember is that C does not advocate to return the address of a local variable to outside of the function, so you would have to define the local variable as static variable.
 
@@ -45,10 +47,11 @@ Second point to remember is that C does not advocate to return the address of a 
 3)	DECLARATION OF Dynamic 2d array
 __________________________________________
 A dynamic 2D array is basically an array of pointers to arrays. You should initialize it using a loop, like this:
-
+```c++
 int** ary = new int*[rowCount];
 for(int i = 0; i < rowCount; ++i)
     ary[i] = new int[colCount];
+```
 **************************************************************************
 4) Subarray/Substring vs Subsequence
 ________________________________________________
@@ -60,6 +63,7 @@ In general, for an array/string of size n, there are n*(n+1)/2 non-empty subarra
 
 How to generate all subarrays?
 We can run two nested loops, the outer loop picks starting element and inner loop considers all elements on right of the picked elements as ending element of subarray.
+```c++
 /*  C++ code to generate all possible subarrays/subArrays
     Complexity- O(n^3) */
 #include<bits/stdc++.h>
@@ -93,6 +97,7 @@ int main()
     subArray(arr, n);
     return 0;
 }
+```
 
 Output:
 
@@ -119,6 +124,7 @@ A string example to differentiate: Consider strings “geeksforgeeks” and “g
 
 How to generate all Subsequences?
 We can use algorithm to generate power set for generation of all subsequences.
+```c++
 /*  C++ code to generate all possible subsequences.
     Time Complexity O(n * 2^n) */
 #include<bits/stdc++.h>
@@ -152,7 +158,7 @@ int main()
     printSubsequences(arr, n);
     return 0;
 }
-
+```
 All Non-empty Subsequences
 1 
 2 
