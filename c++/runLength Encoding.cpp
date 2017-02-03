@@ -53,15 +53,15 @@ for ( i=0;src[i]!='\0';i+=2){
 
 int main(){
     char str[40];
-    cout<<"\t\t__Run Length Encoding__";
+    cout<<"\t\t__Run Length Encoding__"<<endl<<endl;
     cout<<"enter the string to be compressed  : ";
     gets(str);
     char *res=encode(str);
-    cout<<"\t\tEncoded text_____________";
+    cout<<endl<<"\nEncoded text_____________"<<endl;
     cout<<res<<endl;
-    cout<<"\t\tDecoded text_____________";
+    cout<<endl<<"\nDecoded text_____________"<<endl;
     res=decode(res);
-    cout<<res;
+    cout<<res<<endl;
     return 0;
 }
 
