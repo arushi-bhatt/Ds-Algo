@@ -10,7 +10,7 @@ Some important features :
 
 3. The required infrormation about the Question is given at the top of every source code file, followed by the solution.
 
-4. For some good and tricky questions, I have added the list of things, that I learnt after programming of that particular question.  
+4. For some good and tricky questions, I have added the list of things and tips, that I learnt after programming of that particular question.  
 
 5. Some note-worthy points are mentioned in the 'Important Tips' and 'Important Questions' text files too.
 
