@@ -1,6 +1,6 @@
 //Binary Search (only for sorted array)
 /*
-Binary Search (Recursive)
+Binary Search (Recursive approach)
 Given an integer sorted array (sorted in increasing order) and an element x, find the x in given array using binary search. Return the index of x.
 Return -1 if x is not present in the given array.
 
