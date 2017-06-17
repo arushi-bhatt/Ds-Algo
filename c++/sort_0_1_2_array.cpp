@@ -56,3 +56,37 @@ int main()
     cout<<endl;
     return 0;
 }
+
+
+//correct solution
+// arr - input array
+// n - size of array
+void swap(int &a , int &b){
+    int temp= a;
+    a=b;
+    b=temp;
+}
+
+
+void sort012(int arr[], int n)  {
+    /* Don't write main().
+     * Don't read input, it is passed as function argument.
+     * No need to print or return the output.
+     * Taking input and printing output is handled automatically.
+     */
+     int i,j,k;
+    for(i=0,j=-1,k=n-1;i<=k;){
+        if(arr[i]==0){
+            swap(arr[i],arr[j+1]);
+            i++;j++;
+
+        }
+        else if(arr[i]==1){
+            i++;
+        }
+        else {
+            swap(arr[i],arr[k]);
+            k--;
+        }
+    }
+}

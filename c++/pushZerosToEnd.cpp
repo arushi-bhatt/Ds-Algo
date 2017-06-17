@@ -27,6 +27,33 @@ void PushZeroesEnd(int arr[], int n){
 
 }
 
+/*new code
+// arr - input array
+// n - size of array
+
+void PushZeroesEnd(int arr[], int n){
+    /* Don't write main().
+     * Don't read input, it is passed as function argument.
+     * No need to return or print the output.
+     * Taking input and printing output is handled automatically.
+     */
+
+    int i,count=0;
+    for (i=0;i<n;i++){
+        if(arr[i]==0){
+            count++;
+        }
+        else{
+            arr[i-count]=arr[i];
+        }
+    }
+    while(count){
+        arr[n-count]=0;
+        count--;
+    }
+}
+*/
+
 int main(){
 //n=no.of elements
 

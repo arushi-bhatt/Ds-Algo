@@ -110,3 +110,51 @@ int main(){
     delete [] output;
 
 return 0;}
+
+
+
+
+// input1 - first array
+// size1 - size of first array
+// input2 - second array
+// size2 - size of second array
+// output - array in which sum is to be stored
+
+
+void sumOfTwoArrays(int a[], int an, int b[], int bn, int c[]){
+    /* Don't write main().
+     * Don't read input, it is passed as function argument.
+     * No need to print or return the output. Just fill the output in given output array.
+     * Taking input and printing output is handled automatically.
+     */
+
+int *big=NULL;
+int *small=NULL;
+int temp;
+    if(an>=bn){
+       big=a; small=b;
+
+    }
+    else{
+        big=b;small=a;
+        temp=bn;
+        bn=an;
+        an=temp;
+    }
+//int *result= new int[an+1];
+    int i,carry=0,ans=0,diff=an-bn;
+    for(i=an-1;i>=0;--i){
+
+        if(i-diff>=0){
+            ans=big[i]+small[i-diff]+carry;
+        }
+        else ans=big[i]+carry;
+
+
+      c[i+1]=ans%10;
+      carry=ans/10;
+    }
+    c[i+1]=carry;
+
+   // delete [] result;
+}
